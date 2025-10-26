@@ -1,0 +1,431 @@
+/* Estilos generales */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url('/public/background.jpg'); /* Imagen de fondo */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+/* ===== CONTENEDOR PRINCIPAL DE LA SECCIÓN DE INICIO ===== */
+.hero-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ocupa toda la altura de la pantalla */
+  width: 100%;
+  background: url("/mnt/data/ccd26cf7-77d1-4415-ad06-f07a493825f7.png") 
+    center center / cover no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Capa de contenido con fondo semitransparente */
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  max-width: 520px;
+  width: 90%;
+}
+
+/* Texto principal */
+.title {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+
+/* Subtítulo */
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin-bottom: 20px;
+}
+
+/* Botón */
+.btn-agendar {
+  background: #c59d5f;
+  color: #111;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn-agendar:hover {
+  background: #b5894e;
+}
+
+/* Animación suave al cargar */
+.hero-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlide 1s ease-out forwards;
+}
+
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-section {
+  min-height: calc(100vh - 70px); /* Ajusta según tu navbar */
+  background: url("https://images.unsplash.com/photo-1591354869253-e5cc0c33bdc8")
+    center center / cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px; /* Evita que se corte en móviles */
+}
+
+/* Animación al aparecer */
+.hero-section {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeSlide 1s ease-out forwards;
+}
+
+/* Keyframes de la animación */
+@keyframes fadeSlide {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.overlay {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 40px 30px;
+  border-radius: 16px;
+  text-align: center;
+  color: #fff;
+  max-width: 520px;
+  width: 100%;
+}
+
+
+.title {
+  font-size: clamp(2rem, 4vw, 3.5rem); /* Ajusta según pantalla */
+  margin-bottom: 12px;
+  font-weight: bold;
+}
+.subtitle {
+  font-size: clamp(1rem, 2vw, 1.4rem);
+  margin-bottom: 20px;
+}
+.btn-agendar {
+  background: #c59d5f;
+  color: #111;
+  border: none;
+  padding: 14px 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.btn-agendar:hover {
+  background: #b5894e;
+}
+
+/* Centrar el contenido */
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Estilos de la barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 10px 20px;
+    color: white;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+.logo {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+.username {
+    font-size: 18px;
+    font-weight: bold;
+}
+.navbar-menu {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+.navbar-menu li {
+    display: inline;
+}
+
+.navbar-menu a, .logout-button {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.logout-button {
+    font-weight: bold;
+    background: red;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Contenedor principal del login */
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-box {
+    display: flex;
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 400px;
+    flex-direction: column;
+    align-items: center;
+}
+.login-image {
+    width: 100px;
+    height: 100px;
+    background-image: url('./login.png'); /* Imagen de login */
+    background-size: cover;
+    background-position: center;
+    /*border-radius: 50%;*/
+    margin-bottom: 15px;
+}
+.login-form {
+    width: 100%;
+    text-align: center;
+}
+
+h2 {
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+.input-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+.input-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #555;
+}
+.input-field {
+    width: 380px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+.login-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+.login-button:hover {
+    background-color: #0056b3;
+}
+.login-links {
+    margin-top: 10px;
+}
+.login-links a {
+    color: #007bff;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 14px;
+}
+.login-links a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* === ESTILOS EXCLUSIVOS PARA LA GALERÍA (COMPLETAMENTE AISLADO) === */
+
+.gallery-container {
+  /* Resetea cualquier estilo global que pueda afectar */
+all: initial;
+font-family: Arial, sans-serif; /* Fuente específica */
+padding: 2rem; /* Espaciado interno */
+margin: 0; /* Sin márgenes */
+display: flex; /* Activa flexbox */
+flex-direction: column; /* Apila elementos verticalmente */
+align-items: center; /* Centra horizontalmente */
+justify-content: center; /* Centra verticalmente */
+width: 100%; /* Ancho completo */
+height: 100%; /* Alto completo */
+box-sizing: border-box; /* Incluye padding en dimensiones */
+}
+
+.gallery-title {
+  font-size: 3rem; /* Aumentado de 2.5rem a 3rem */
+  color: #1a1a1a; /* Color más oscuro para mayor contraste */
+text-align: center; /* Texto centrado */
+margin-bottom: 0.5rem; /* Margen inferior */
+  font-weight: 700; /* Negrita más fuerte */
+font-family: Arial, sans-serif; /* Fuente específica */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para destacar sobre fondo */
+}
+
+.gallery-description {
+text-align: center; /* Texto centrado */
+  color: #333; /* Color más oscuro para mayor contraste */
+margin-bottom: 2rem; /* Margen inferior */
+  font-size: 1.3rem; /* Aumentado de 1.1rem a 1.3rem */
+font-family: Arial, sans-serif; /* Fuente específica */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Sombra sutil */
+}
+
+/* Carrusel horizontal con efecto hover */
+.galeria {
+display: flex; /* Activa flexbox */
+  width: 90vw; /* Ocupa el 80% del ancho de la ventana */
+  height: 60vh; /* Ocupa el 40% de la altura de la ventana */
+overflow-x: auto; /* Permite desplazamiento horizontal */
+scroll-behavior: smooth; /* Desplazamiento suave */
+gap: 10px; /* Espacio entre elementos */
+padding: 10px; /* Espaciado interno */
+background: rgba(255, 255, 255, 0.536); /* Fondo blanco semitransparente */
+border-radius: 12px; /* Bordes redondeados */
+box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra suave */
+position: relative; /* Posicionamiento relativo */
+}
+
+.image-wrapper {
+position: relative; /* Posicionamiento relativo */
+width: 0px; /* Ancho inicial 0 */
+flex-grow: 1; /* Se expande para ocupar espacio */
+overflow: hidden; /* Oculta contenido que exceda */
+transition: width 0.7s ease; /* Transición suave del ancho */
+}
+
+.image-wrapper:hover {
+width: 500px; /* Ancho al hacer hover */
+}
+
+.style-image {
+width: 100%; /* Ancho completo del contenedor */
+height: 100%; /* Alto completo del contenedor */
+object-fit: cover; /* Ajusta imagen al contenedor */
+filter: brightness(80%); /* Reduce brillo */
+transition: filter 0.7s ease, opacity 0.7s ease; /* Transición suave de filtro y opacidad */
+}
+
+.image-wrapper:hover .style-image {
+opacity: 1; /* Opacidad completa */
+filter: brightness(130%); /* Aumenta brillo */
+}
+
+.image-info {
+position: absolute; /* Posicionamiento absoluto */
+bottom: 0; /* Pega al borde inferior */
+left: 0; /* Pega al borde izquierdo */
+right: 0; /* Pega al borde derecho */
+background: rgba(255, 255, 255, 0.9); /* Fondo blanco semitransparente */
+padding: 10px; /* Espaciado interno */
+text-align: center; /* Texto centrado */
+border-radius: 0 0 8px 8px; /* Bordes redondeados inferiores */
+opacity: 0; /* Inicialmente invisible */
+transition: opacity 0.3s ease; /* Transición suave de opacidad */
+}
+
+.image-wrapper:hover .image-info {
+opacity: 1; /* Visible al hacer hover */
+}
+
+.image-info h3 {
+margin: 0 0 5px 0; /* Sin márgenes excepto inferior */
+color: #2c3e50; /* Color de texto */
+font-size: 1.2rem; /* Tamaño de texto */
+font-weight: 600; /* Texto en negrita */
+font-family: Arial, sans-serif; /* Fuente específica */
+}
+
+.image-info p {
+margin: 0; /* Sin márgenes */
+color: #555; /* Color de texto */
+line-height: 1.4; /* Interlineado */
+font-size: 0.9rem; /* Tamaño de texto */
+font-family: Arial, sans-serif; /* Fuente específica */
+}
+
+/* ESTILOS DE ABOUT */
+.about-section {
+    background-color: #fff;
+    color: #333;
+    font-family: 'Helvetica Neue', sans-serif;
+    padding: 40px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-banner {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.about-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.about-content p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+.about-image {
+    max-width: 70%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-info {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
